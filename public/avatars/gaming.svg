@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#FAF5FF" stroke="#A855F7" stroke-width="2"/>
+  
+  <!-- Game controller -->
+  <rect x="45" y="80" width="110" height="60" rx="30" fill="#374151"/>
+  <rect x="50" y="85" width="100" height="50" rx="25" fill="#1F2937"/>
+  
+  <!-- D-pad -->
+  <rect x="62" y="102" width="20" height="8" rx="1" fill="#4B5563"/>
+  <rect x="68" y="96" width="8" height="20" rx="1" fill="#4B5563"/>
+  
+  <!-- Buttons -->
+  <circle cx="130" cy="100" r="6" fill="#A855F7"/>
+  <circle cx="145" cy="110" r="6" fill="#EC4899"/>
+  <circle cx="130" cy="120" r="6" fill="#3B82F6"/>
+  <circle cx="115" cy="110" r="6" fill="#22C55E"/>
+  
+  <!-- Joysticks -->
+  <circle cx="85" cy="120" r="10" fill="#4B5563"/>
+  <circle cx="85" cy="120" r="6" fill="#6B7280"/>
+  <circle cx="120" cy="95" r="10" fill="#4B5563"/>
+  <circle cx="120" cy="95" r="6" fill="#6B7280"/>
+  
+  <!-- Person holding controller -->
+  <circle cx="100" cy="50" r="14" fill="#374151" /> <!-- Head -->
+  <path d="M100 64 L100 80" stroke="#374151" stroke-width="5" stroke-linecap="round"/> <!-- Body -->
+  <path d="M100 72 L75 95" stroke="#374151" stroke-width="4" stroke-linecap="round"/> <!-- Left arm -->
+  <path d="M100 72 L125 95" stroke="#374151" stroke-width="4" stroke-linecap="round"/> <!-- Right arm -->
+  
+  <!-- Stars/sparkles -->
+  <path d="M45 55 L48 60 L45 65 L42 60 Z" fill="#A855F7"/>
+  <path d="M155 45 L158 50 L155 55 L152 50 Z" fill="#EC4899"/>
+  <path d="M165 70 L167 73 L165 76 L163 73 Z" fill="#3B82F6"/>
+</svg>

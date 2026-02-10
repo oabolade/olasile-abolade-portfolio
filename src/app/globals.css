@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  /* Light mode colors (default) */
+  :root {
+    --color-background: #FAFAFA;
+    --color-foreground: #171717;
+    --color-accent: #2563EB;
+    --color-accent-light: #3B82F6;
+    --color-accent-dark: #1D4ED8;
+    --color-muted: #737373;
+    --color-muted-light: #A3A3A3;
+    --color-muted-lighter: #E5E5E5;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #F5F5F5;
+  }
+
+  /* Dark mode colors */
+  html.dark {
+    --color-background: #0A0A0A;
+    --color-foreground: #FAFAFA;
+    --color-accent: #3B82F6;
+    --color-accent-light: #60A5FA;
+    --color-accent-dark: #2563EB;
+    --color-muted: #A3A3A3;
+    --color-muted-light: #737373;
+    --color-muted-lighter: #262626;
+    --color-surface: #171717;
+    --color-surface-alt: #1F1F1F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: var(--color-foreground);
+  }
+}
+
+@layer components {
+  /* Container utility */
+  .container-custom {
+    @apply mx-auto px-6 md:px-8 lg:px-12;
+    max-width: 72rem;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn px-6 py-3;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-primary:active {
+    opacity: 0.8;
+  }
+
+  .btn-secondary {
+    @apply btn px-6 py-3;
+    border: 1px solid var(--color-muted-lighter);
+    background-color: transparent;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-surface-alt);
+  }
+
+  .btn-ghost {
+    @apply btn px-4 py-2;
+    color: var(--color-muted);
+  }
+
+  .btn-ghost:hover {
+    color: var(--color-foreground);
+    background-color: var(--color-surface-alt);
+  }
+
+  /* Link styles */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    @apply absolute bottom-0 left-0 h-px w-full;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    content: '';
+  }
+
+  .link-underline:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  /* Card styles */
+  .card {
+    @apply rounded-2xl p-6 md:p-8 transition-all duration-200;
+    border: 1px solid var(--color-muted-lighter);
+    background-color: var(--color-surface);
+  }
+
+  .card-hover {
+    @apply card;
+  }
+
+  .card-hover:hover {
+    border-color: var(--color-muted-light);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Tag/badge styles */
+  .tag {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+    background-color: var(--color-surface-alt);
+    color: var(--color-muted);
+  }
+
+  /* Theme toggle button */
+  .theme-toggle {
+    @apply p-3 rounded-full transition-all duration-200;
+    color: var(--color-muted);
+  }
+
+  .theme-toggle:hover {
+    color: var(--color-foreground);
+    background-color: var(--color-surface-alt);
+  }
+}
+
+@layer utilities {
+  /* Custom color utilities using CSS variables */
+  .bg-background { background-color: var(--color-background); }
+  .bg-foreground { background-color: var(--color-foreground); }
+  .bg-surface { background-color: var(--color-surface); }
+  .bg-surface-alt { background-color: var(--color-surface-alt); }
+  
+  .text-foreground { color: var(--color-foreground); }
+  .text-muted { color: var(--color-muted); }
+  .text-muted-light { color: var(--color-muted-light); }
+  .text-accent { color: var(--color-accent); }
+  
+  .border-muted-lighter { border-color: var(--color-muted-lighter); }
+  .border-muted-light { border-color: var(--color-muted-light); }
+
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-foreground), var(--color-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger animation delay utilities */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+}

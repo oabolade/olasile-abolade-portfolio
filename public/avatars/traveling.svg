@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  
+  <!-- Globe -->
+  <circle cx="100" cy="105" r="45" fill="#93C5FD" stroke="#3B82F6" stroke-width="2"/>
+  <ellipse cx="100" cy="105" rx="20" ry="45" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+  <path d="M55 105 L145 105" stroke="#3B82F6" stroke-width="1.5"/>
+  <path d="M60 85 L140 85" stroke="#3B82F6" stroke-width="1"/>
+  <path d="M60 125 L140 125" stroke="#3B82F6" stroke-width="1"/>
+  
+  <!-- Continents (simplified) -->
+  <path d="M75 90 Q85 85 95 90 Q100 100 90 105 Q80 100 75 90" fill="#4ADE80"/>
+  <path d="M105 85 Q120 80 125 95 Q120 110 110 105 Q105 95 105 85" fill="#4ADE80"/>
+  <path d="M85 115 Q95 118 100 130 Q90 130 85 120 Z" fill="#4ADE80"/>
+  
+  <!-- Airplane -->
+  <g transform="translate(130, 50) rotate(30)">
+    <path d="M0 10 L30 0 L30 5 L5 12 L30 19 L30 24 L0 14 Z" fill="#F59E0B"/>
+    <path d="M8 8 L8 16 L-5 12 Z" fill="#F59E0B"/>
+  </g>
+  
+  <!-- Flight path -->
+  <path d="M50 70 Q100 40 150 65" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+</svg>

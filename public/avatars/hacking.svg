@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  
+  <!-- Laptop base -->
+  <rect x="45" y="120" width="110" height="8" rx="2" fill="#374151"/>
+  
+  <!-- Laptop screen -->
+  <rect x="55" y="70" width="90" height="55" rx="4" fill="#1F2937"/>
+  <rect x="60" y="75" width="80" height="45" rx="2" fill="#111827"/>
+  
+  <!-- Code lines on screen -->
+  <rect x="65" y="80" width="35" height="3" rx="1" fill="#3B82F6"/>
+  <rect x="65" y="87" width="50" height="3" rx="1" fill="#60A5FA"/>
+  <rect x="65" y="94" width="25" height="3" rx="1" fill="#93C5FD"/>
+  <rect x="95" y="94" width="30" height="3" rx="1" fill="#3B82F6"/>
+  <rect x="65" y="101" width="45" height="3" rx="1" fill="#60A5FA"/>
+  <rect x="65" y="108" width="20" height="3" rx="1" fill="#93C5FD"/>
+  
+  <!-- Person figure at laptop -->
+  <circle cx="100" cy="50" r="14" fill="#374151" /> <!-- Head -->
+  <path d="M100 64 L100 95" stroke="#374151" stroke-width="5" stroke-linecap="round"/> <!-- Body -->
+  <path d="M100 75 L78 90" stroke="#374151" stroke-width="4" stroke-linecap="round"/> <!-- Left arm -->
+  <path d="M100 75 L122 90" stroke="#374151" stroke-width="4" stroke-linecap="round"/> <!-- Right arm -->
+  
+  <!-- Code symbols floating -->
+  <text x="40" y="55" fill="#3B82F6" font-family="monospace" font-size="14">&lt;/&gt;</text>
+  <text x="145" y="60" fill="#60A5FA" font-family="monospace" font-size="12">{}</text>
+</svg>
