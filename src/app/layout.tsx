@@ -3,6 +3,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://olasile-abolade.com'),
   title: 'Olasile Abolade | AI Product Manager',
   description: 'AI Product Manager building AI-powered products that turn complexity into measurable business value. Expertise in LLMs, RAG, AI agents, and data-driven product strategy.',
   keywords: ['AI Product Manager', 'Product Management', 'LLM', 'RAG', 'AI Agents', 'Data Products', 'SaaS', 'Healthcare Tech'],
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://olasile-abolade.me',
+    url: 'https://olasile-abolade.com',
     siteName: 'Olasile Abolade',
     title: 'Olasile Abolade | AI Product Manager',
     description: 'AI Product Manager building AI-powered products that turn complexity into measurable business value.',
